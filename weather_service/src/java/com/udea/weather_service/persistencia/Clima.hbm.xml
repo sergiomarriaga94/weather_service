@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/05/2017 03:48:25 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.udea.weather_service.persistencia.Clima" table="clima" catalog="weather" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="ciudad" type="string">
+            <column name="CIUDAD" length="30" not-null="true" />
+        </property>
+        <property name="tempactualfarenheith" type="string">
+            <column name="TEMPACTUALFARENHEITH" length="10" not-null="true" />
+        </property>
+        <property name="tempactualcentigrados" type="string">
+            <column name="TEMPACTUALCENTIGRADOS" length="10" not-null="true" />
+        </property>
+        <property name="humedad" type="string">
+            <column name="HUMEDAD" length="10" not-null="true" />
+        </property>
+        <property name="tipoNubosidad" type="string">
+            <column name="TIPO_NUBOSIDAD" length="20" not-null="true" />
+        </property>
+        <property name="precipitacion" type="string">
+            <column name="PRECIPITACION" length="10" not-null="true" />
+        </property>
+        <property name="tempactualfarenheith2" type="string">
+            <column name="TEMPACTUALFARENHEITH2" length="10" not-null="true" />
+        </property>
+        <property name="tempactualcentigrados2" type="string">
+            <column name="TEMPACTUALCENTIGRADOS2" length="10" not-null="true" />
+        </property>
+        <property name="humedad2" type="string">
+            <column name="HUMEDAD2" length="10" not-null="true" />
+        </property>
+        <property name="tipoNubosidad2" type="string">
+            <column name="TIPO_NUBOSIDAD2" length="20" not-null="true" />
+        </property>
+        <property name="precipitacion2" type="string">
+            <column name="PRECIPITACION2" length="10" not-null="true" />
+        </property>
+        <property name="tempactualfarenheith3" type="string">
+            <column name="TEMPACTUALFARENHEITH3" length="10" not-null="true" />
+        </property>
+        <property name="tempactualcentigrados3" type="string">
+            <column name="TEMPACTUALCENTIGRADOS3" length="10" not-null="true" />
+        </property>
+        <property name="humedad3" type="string">
+            <column name="HUMEDAD3" length="10" not-null="true" />
+        </property>
+        <property name="tipoNubosidad3" type="string">
+            <column name="TIPO_NUBOSIDAD3" length="20" not-null="true" />
+        </property>
+        <property name="precipitacion3" type="string">
+            <column name="PRECIPITACION3" length="10" not-null="true" />
+        </property>
+        <property name="fechaIngreso" type="timestamp">
+            <column name="FECHA_INGRESO" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
