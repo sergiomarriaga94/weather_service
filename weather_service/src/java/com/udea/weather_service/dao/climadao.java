@@ -7,6 +7,7 @@ package com.udea.weather_service.dao;
 
 import com.udea.weather_service.persistencia.Clima;
 import java.util.List;
+import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -18,7 +19,9 @@ import org.hibernate.Transaction;
  */
 public class climadao {
     
-    public void IngresarClima(Clima clima){
+    public void IngresarClima(Clima clima) {
+        
+        System.out.println("paso por aqui 2");
         
         SessionFactory sessionFactory=null;
         Session session=null;
@@ -26,12 +29,13 @@ public class climadao {
         
         try{
         sessionFactory=HibernateUtil.getSessionFactory();
+        System.out.println("paso por aqui 3");
         session=sessionFactory.openSession();
         transaction=session.beginTransaction();
         session.save(clima);
         transaction.commit();
         session.close();
-        }catch(Exception e ){
+        }catch(HibernateException e ){
             transaction.rollback();
             throw new RuntimeException("No se pudo agregar el clima a la base de datos");
         }

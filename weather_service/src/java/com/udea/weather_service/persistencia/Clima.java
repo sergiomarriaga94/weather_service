@@ -63,7 +63,7 @@ public class Clima  implements java.io.Serializable {
        this.precipitacion3 = precipitacion3;
        this.fechaIngreso = fechaIngreso;
     }
-     public Clima(String ciudad, String tempactualfarenheith, String tempactualcentigrados, String humedad, String tipoNubosidad, String precipitacion, String tempactualfarenheith2, String tempactualcentigrados2, String humedad2, String tipoNubosidad2, String precipitacion2, String tempactualfarenheith3, String tempactualcentigrados3, String humedad3, String tipoNubosidad3, String precipitacion3) {
+    public Clima(String ciudad, String tempactualfarenheith, String tempactualcentigrados, String humedad, String tipoNubosidad, String precipitacion, String tempactualfarenheith2, String tempactualcentigrados2, String humedad2, String tipoNubosidad2, String precipitacion2, String tempactualfarenheith3, String tempactualcentigrados3, String humedad3, String tipoNubosidad3, String precipitacion3) {
        this.ciudad = ciudad;
        this.tempactualfarenheith = tempactualfarenheith;
        this.tempactualcentigrados = tempactualcentigrados;
@@ -80,10 +80,7 @@ public class Clima  implements java.io.Serializable {
        this.humedad3 = humedad3;
        this.tipoNubosidad3 = tipoNubosidad3;
        this.precipitacion3 = precipitacion3;
-    }
-
-    public Clima(String ciudad, String tempFarenheit, String tempCentigrados, String humedad, String nubosidad, String precipitacion, String tempFarenheit2, String tempCentigrados2, String humedad2, String nubosidad2, String precipitacion2, String tempFarenheit3, String tempCentigrados3, String humedad3, String precipitacion3) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
